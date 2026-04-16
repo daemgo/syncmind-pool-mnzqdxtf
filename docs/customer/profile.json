@@ -1,0 +1,109 @@
+{
+  "companyName": "杭州天霖云数字科技有限公司",
+  "shortName": "天霖云",
+  "summary": "基于钉钉+宜搭的工程行业数字化服务商，2025年获高新技术企业认定，主打天工云三档产品，已服务3000+钉钉企业客户、近百家工程行业定制项目。",
+  "industry": "软件与信息技术服务业",
+  "subIndustry": "工程行业数字化解决方案",
+  "scale": "50人以下",
+  "mainBusiness": "基于钉钉+宜搭平台提供工程行业数字化解决方案，涵盖项目管理、流程协同、数据管理等功能",
+  "products": [
+    { "name": "天工云（标准版）", "description": "面向中小工程企业的基础数字化管理" },
+    { "name": "天工云（专业版）", "description": "面向中型企业的进阶项目管理与流程协同" },
+    { "name": "天工云（旗舰版）", "description": "面向大型工程企业的全流程数字化管理" }
+  ],
+  "targetCustomers": ["工程行业中小企业", "建筑施工企业", "使用钉钉的制造业/项目型公司"],
+  "businessModel": "SaaS订阅 + 项目定制实施",
+  "rating": "中等",
+  "tags": ["钉钉生态", "宜搭", "高新技术企业", "工程数字化", "SaaS", "项目管理"],
+  "website": "https://tlbip.com",
+  "slogan": null,
+  "isListed": false,
+  "stockCode": null,
+  "revenueScale": null,
+  "registration": {
+    "registeredName": "杭州天霖云数字科技有限公司",
+    "registeredCapital": "1000万元",
+    "paidCapital": null,
+    "establishedDate": "2023-07-14",
+    "legalRepresentative": "黄俊峰",
+    "businessStatus": "存续",
+    "shareholders": [
+      { "name": "杭州钉冠企业管理合伙企业(有限合伙)", "share": "98%" },
+      { "name": "杜英其", "share": "2%" }
+    ],
+    "branchCount": null,
+    "interpretation": "注册资本1000万元但实缴未公示，存在资本到位风险；钉冠企业持股98%，实控人通过有限合伙间接持股，股权结构集中。",
+    "organizationType": "民营企业",
+    "keyFindings": [
+      "注册资本1000万元，实缴资本未公示，存在资本到位风险",
+      "2025年底完成法定代表人变更（杜英其→黄俊峰），管理层稳定性待观察",
+      "2024年12月从管理咨询公司更名为数字科技公司，业务方向转型"
+    ]
+  },
+  "organization": {
+    "type": "创业型/产品型",
+    "decisionChain": "销售接触→方案评估→钉冠企业/法人黄俊峰拍板→合同签署",
+    "keyPersons": [
+      { "name": "黄俊峰", "title": "法定代表人/经理/财务负责人" },
+      { "name": "杜英其", "title": "股东（2%），原法定代表人" }
+    ],
+    "salesStrategy": "依托钉钉生态获客，主打3000+钉钉企业客户基础，从标准版切入逐步升级至专业/旗舰版；重点关注有定制项目需求的工程行业客户。"
+  },
+  "timing": {
+    "phase": "快速扩张期",
+    "analysisBasis": [
+      "2025年认定为高新技术企业，说明企业具备一定技术积累且在积极申请资质",
+      "官网宣传已服务3000+钉钉企业客户、近百家工程行业定制项目，说明已有规模化销售",
+      "2024年从管理咨询公司更名为数字科技公司，业务方向明确转向数字化"
+    ],
+    "entryStrategy": "以钉钉+宜搭生态切入，匹配现有技术栈；提供免费体验或POC展示工程行业案例，重点打项目管理痛点",
+    "urgency": "中等——企业已建立一定客户基础，正处于产品标准化与规模化复制阶段，采购窗口期约6-12个月"
+  },
+  "hiring": {
+    "keySignals": []
+  },
+  "competition": {
+    "industryRank": "区域中小型",
+    "marketShare": "钉钉生态内有一定知名度，工程行业数字化赛道分散，暂无头部垄断",
+    "mainCompetitors": ["工程行业传统软件厂商", "其他钉钉ISV合作伙伴"],
+    "knownClients": ["3000+钉钉企业客户", "近百家工程行业定制项目客户"]
+  },
+  "riskAndPolicy": {
+    "legal": {
+      "lawsuitCount": null,
+      "executedPerson": false,
+      "dishonestPerson": false,
+      "businessAnomalies": [],
+      "equityFreeze": false
+    },
+    "policy": {
+      "isSpecializedSME": false,
+      "smeLevel": "",
+      "isHighTech": true,
+      "digitalTransformation": false,
+      "esgGreen": false
+    }
+  },
+  "painPoints": [
+    { "area": "项目管理", "description": "多项目并行混乱、进度不透明、资源冲突", "severity": "高" },
+    { "area": "交付管理", "description": "需求变更频繁、交付延期、验收扯皮", "severity": "高" },
+    { "area": "客户运营", "description": "客户信息分散、销售过程不透明、续约率风险", "severity": "中" },
+    { "area": "回款管理", "description": "账期长、回款难跟踪", "severity": "中" },
+    { "area": "产品标准化", "description": "定制项目多难以规模化复制，产品迭代不规划", "severity": "中" }
+  ],
+  "opportunities": [
+    { "area": "钉钉生态合作", "description": "与阿里钉钉深度绑定，基于宜搭低代码平台开发，渠道资源稳定", "likelihood": "高" },
+    { "area": "工程行业数字化", "description": "工程行业数字化渗透率低，天霖云已有行业积累，有先发优势", "likelihood": "中" },
+    { "area": "高新技术企业资质", "description": "2025年获高企认定，具备资质门槛，可参与政府/大型企业招标", "likelihood": "中" }
+  ],
+  "analysisPath": "B",
+  "confidence": 0.6,
+  "metadata": {
+    "createdAt": "2026-04-16",
+    "updatedAt": "2026-04-16",
+    "createdBy": "AI",
+    "version": "1.0",
+    "sources": ["官网tlbip.com", "爱企查工商信息"],
+    "confidence": 0.6
+  }
+}
