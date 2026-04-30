@@ -1,0 +1,480 @@
+{
+  "currentVersion": "v0.1",
+  "status": "draft",
+  "versions": [{
+    "version": "v0.1",
+    "createdAt": "2026-04-30",
+    "trigger": "cold-start",
+    "inputSummary": "基于客户档案推演",
+    "changeSummary": ["从档案推演11条需求"]
+  }],
+  "current": {
+    "salesInput": {
+      "salesPerson": "",
+      "lastUpdated": "2026-04-30",
+      "overallAssessment": {
+        "customerIntent": "解决客户跟进、拜访、合同、项目的管理混乱问题",
+        "projectUrgency": "中等，企业处于快速扩张期，有管理规范化诉求",
+        "budgetSituation": "未知",
+        "competitionStatus": "未涉及竞对",
+        "winProbability": "待评估",
+        "keyObstacles": ["预算未知", "需求细节待验证"],
+        "confidenceLevel": "低"
+      },
+      "keyPersons": [],
+      "realNeeds": {
+        "explicitNeeds": [],
+        "implicitNeeds": [],
+        "suspectedNeeds": ["客户信息统一管理", "销售过程可视化", "合同回款跟踪", "拜访计划与执行"]
+      },
+      "decisionFactors": {
+        "primaryFactor": "功能匹配度",
+        "secondaryFactors": ["实施周期", "与钉钉生态的集成"],
+        "dealBreakers": []
+      },
+      "notes": "冷启动推演，待首访验证",
+      "concerns": [],
+      "suggestions": []
+    },
+    "sources": {
+      "meetings": [],
+      "documents": [],
+      "communications": [],
+      "observations": []
+    },
+    "needs": [
+      {
+        "id": "REQ-001",
+        "category": "business",
+        "title": "客户档案统一管理",
+        "description": "将分散在各销售人员手中的客户信息（公司名称、联系人、行业、规模、业务情况）集中录入系统，支持多维度标签分类，避免因人员流动导致客户信息丢失。",
+        "priority": "must",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：客户运营痛点明确提及'客户信息分散'，50人以下创业型团队，销售人员2-3人，信息集中管理是基础诉求",
+          "raw": null
+        },
+        "status": "active",
+        "module": "客户信息管理",
+        "relatedPainPoints": ["客户运营：客户信息分散、销售过程不透明、续约率风险"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-002",
+        "category": "business",
+        "title": "客户分类与分级管理",
+        "description": "按行业、规模、合作阶段等维度对客户分类，支持自定义标签体系；重点客户标记加星，优先分配跟进资源。",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：SaaS订阅+项目定制双模式，需区分标准版客户与定制项目客户，便于产品标准化管理",
+          "raw": null
+        },
+        "status": "active",
+        "module": "客户信息管理",
+        "relatedPainPoints": ["产品标准化：定制项目多难以规模化复制"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-003",
+        "category": "business",
+        "title": "商机跟进记录与阶段管理",
+        "description": "记录商机从线索到签单的全流程，每个阶段可设置预计签单日期和预计金额；管理者可查看所有商机的整体进展。",
+        "priority": "must",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：客户运营痛点明确'销售过程不透明'，50人团队管理者需实时掌握商机状态",
+          "raw": null
+        },
+        "status": "active",
+        "module": "销售过程管理",
+        "relatedPainPoints": ["客户运营：销售过程不透明"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-004",
+        "category": "business",
+        "title": "拜访计划与执行记录",
+        "description": "支持创建拜访计划（日期、拜访对象、目的），拜访后记录沟通内容和下次跟进事项；可按客户查看完整拜访历史。",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：用户聚焦需求明确提及'拜访'，结合销售过程不透明痛点，拜访记录是过程管理的关键环节",
+          "raw": null
+        },
+        "status": "active",
+        "module": "销售过程管理",
+        "relatedPainPoints": ["客户运营：销售过程不透明"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-005",
+        "category": "business",
+        "title": "合同台账管理",
+        "description": "统一管理所有客户合同，支持录入合同金额、签署日期、生效/到期日期、关联客户等信息；合同附件可上传存档。",
+        "priority": "must",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：用户聚焦需求明确提及'合同'，SaaS订阅模式需跟踪合同到期续约，定制项目需管理多个合同节点",
+          "raw": null
+        },
+        "status": "active",
+        "module": "合同与回款管理",
+        "relatedPainPoints": ["客户运营：续约率风险", "回款管理：账期长、回款难跟踪"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-006",
+        "category": "business",
+        "title": "回款节点与到账跟踪",
+        "description": "合同关联收款计划，设定分期回款节点（预付款、里程碑款、验收款等）；实际回款后标记到账，记录到账日期与金额。",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：回款管理痛点'账期长、回款难跟踪'，定制项目多意味着分期收款场景常见，需清晰跟踪每个节点",
+          "raw": null
+        },
+        "status": "active",
+        "module": "合同与回款管理",
+        "relatedPainPoints": ["回款管理：账期长、回款难跟踪"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-007",
+        "category": "business",
+        "title": "续约预警与客户健康度",
+        "description": "合同到期前30天/60天/90天自动提醒；记录客户使用情况、满意度反馈，综合评估客户健康度，识别流失风险。",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：客户运营痛点明确'续约率风险'，SaaS订阅模式核心关注续约率，需提前介入",
+          "raw": null
+        },
+        "status": "active",
+        "module": "客户服务与续约管理",
+        "relatedPainPoints": ["客户运营：续约率风险"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-008",
+        "category": "business",
+        "title": "多项目关联与看板视图",
+        "description": "一个客户可关联多个项目（标准版、专业版、定制项目），支持看板展示多项目并行状态；项目经理可更新进度，销售可查看项目进展。",
+        "priority": "could",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：项目管理痛点'多项目并行混乱、进度不透明'，工程行业定制项目多，与客户管理联动可提升透明度",
+          "raw": null
+        },
+        "status": "active",
+        "module": "项目与交付管理",
+        "relatedPainPoints": ["项目管理：多项目并行混乱、进度不透明"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-009",
+        "category": "non-functional",
+        "title": "钉钉生态深度集成",
+        "description": "与钉钉组织架构同步，员工通过钉钉扫码登录；消息通知（商机阶段变更、合同到期提醒、待办任务）通过钉钉推送；宜搭低代码平台优先考虑。",
+        "priority": "must",
+        "confidence": "low",
+        "source": {
+          "type": "profile-inference",
+          "detail": "档案推演：企业核心业务基于钉钉+宜搭平台，已有3000+钉钉企业客户，生态集成是产品落地的前提条件",
+          "raw": null
+        },
+        "status": "active",
+        "module": "技术集成",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-010",
+        "category": "non-functional",
+        "title": "移动端优先体验",
+        "description": "核心操作（查看商机、记录拜访、审批签到、收到待办提醒）支持移动端完成；适配钉钉内置浏览器，页面加载流畅。",
+        "priority": "should",
+        "confidence": "low",
+        "source": {
+          "type": "industry-pattern",
+          "detail": "行业通用：50人以下团队外出拜访场景多，移动端是销售工具的标配；钉钉用户习惯移动办公",
+          "raw": null
+        },
+        "status": "active",
+        "module": "技术集成",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      },
+      {
+        "id": "REQ-011",
+        "category": "non-functional",
+        "title": "数据安全与权限控制",
+        "description": "客户数据按组织隔离，不同销售人员只能查看自己负责的客户；管理员可查看全部客户；敏感字段（报价、成本）可设置权限隐藏。",
+        "priority": "must",
+        "confidence": "low",
+        "source": {
+          "type": "industry-pattern",
+          "detail": "行业通用：B2B销售团队共用CRM时，客户数据归属和销售竞争是常见矛盾，需基础权限隔离",
+          "raw": null
+        },
+        "status": "active",
+        "module": "技术集成",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": []
+      }
+    ],
+    "users": [
+      {
+        "role": "普通销售人员",
+        "description": "2-3人，负责客户开发、拜访、跟进商机、录入沟通记录",
+        "mainTasks": ["录入客户信息", "记录商机进展", "创建拜访计划", "更新跟进记录"]
+      },
+      {
+        "role": "销售管理者/老板",
+        "description": "1-2人（黄俊峰等），需全局掌握团队销售进展、商机分布、回款状态",
+        "mainTasks": ["查看销售漏斗", "审批重要节点", "监控回款进度", "制定销售目标"]
+      },
+      {
+        "role": "售前/项目经理",
+        "description": "1-2人，辅助参与客户沟通，记录需求，与项目交付联动",
+        "mainTasks": ["记录客户技术需求", "关联项目信息", "协同跟进商机"]
+      },
+      {
+        "role": "财务/行政",
+        "description": "1人，负责合同归档、回款确认",
+        "mainTasks": ["录入合同信息", "标记回款到账", "合同到期提醒"]
+      }
+    ],
+    "scope": {
+      "inScope": [
+        "客户档案的增删改查",
+        "客户分类标签管理",
+        "商机阶段管理（线索-需求确认-方案-商务-签单）",
+        "拜访计划与记录",
+        "合同台账（基本信息+附件）",
+        "回款节点管理",
+        "续约预警",
+        "钉钉登录与消息通知",
+        "移动端基础功能",
+        "基础权限控制"
+      ],
+      "outOfScope": [
+        "深度项目管理（甘特图、资源调度）",
+        "财务记账与发票管理",
+        "BI分析与高级报表",
+        "与其他ERP/CRM系统对接",
+        "AI智能推荐与自动化营销"
+      ],
+      "futureScope": [
+        "多项目看板联动",
+        "客户健康度评分模型",
+        "销售预测与目标管理",
+        "与宜搭深度绑定（低代码表单）"
+      ],
+      "phases": [
+        {
+          "phase": "1期（MVP）",
+          "description": "客户档案+商机跟进+基础拜访记录",
+          "targetWeeks": 4
+        },
+        {
+          "phase": "2期",
+          "description": "合同台账+回款管理+续约预警",
+          "targetWeeks": 4
+        },
+        {
+          "phase": "3期",
+          "description": "钉钉集成+移动端+权限优化",
+          "targetWeeks": 4
+        }
+      ],
+      "priorityMatrix": [
+        {
+          "quadrant": "高优先级/高价值",
+          "needs": ["REQ-001", "REQ-003", "REQ-005", "REQ-009"]
+        },
+        {
+          "quadrant": "中高优先级/高价值",
+          "needs": ["REQ-002", "REQ-004", "REQ-006"]
+        },
+        {
+          "quadrant": "中低优先级/中价值",
+          "needs": ["REQ-007", "REQ-010", "REQ-011"]
+        },
+        {
+          "quadrant": "低优先级/探索性",
+          "needs": ["REQ-008"]
+        }
+      ]
+    },
+    "constraints": {
+      "budget": {
+        "total": "",
+        "flexibility": "未知"
+      },
+      "timeline": {
+        "expectedStart": "",
+        "expectedGoLive": ""
+      }
+    },
+    "successCriteria": {},
+    "risksAndAssumptions": {
+      "risks": [
+        {
+          "description": "需求细节与实际业务场景存在偏差，冷启动推演无法覆盖所有边界情况",
+          "impact": "中",
+          "mitigation": "首访后快速迭代，调整功能优先级"
+        },
+        {
+          "description": "钉钉宜搭平台能力边界未知，可能存在技术限制导致某些功能无法实现",
+          "impact": "中",
+          "mitigation": "与技术团队提前沟通，确认平台可行性"
+        },
+        {
+          "description": "定制项目客户与SaaS订阅客户的合同回款逻辑差异较大，统一建模复杂度高",
+          "impact": "低",
+          "mitigation": "MVP阶段先覆盖SaaS订阅场景，定制项目作为后续扩展"
+        }
+      ],
+      "assumptions": [
+        {
+          "description": "假设企业当前使用Excel或纸质方式管理客户信息，尚无数字化CRM系统",
+          "impact": "高"
+        },
+        {
+          "description": "假设销售团队愿意在CRM中录入日常跟进数据，数据质量取决于执行力度",
+          "impact": "高"
+        },
+        {
+          "description": "假设钉钉宜搭平台能够支撑基本的表单、流程和消息推送能力",
+          "impact": "中"
+        }
+      ],
+      "dependencies": []
+    },
+    "solutionDirection": {
+      "overallApproach": "基于钉钉宜搭低代码平台快速构建CRM系统，MVP聚焦客户档案+商机跟进+拜访记录，满足销售团队基础管理需求，逐步扩展合同回款和续约管理功能",
+      "recommendedApproach": null,
+      "technicalDirection": null,
+      "implementationStrategy": null,
+      "nextSteps": [
+        "完成首访，验证核心需求假设",
+        "与技术团队确认宜搭平台能力边界",
+        "明确预算范围和期望上线时间",
+        "识别决策人和关键使用角色"
+      ]
+    },
+    "pendingQuestions": [
+      {
+        "id": "PQ-001",
+        "category": "业务",
+        "priority": "必问",
+        "stage": "screening",
+        "question": "目前客户信息是怎么管理的？有没有用Excel或工具记录？",
+        "purpose": "确认现有管理方式，评估迁移成本和数据质量",
+        "expectedDirection": "有记录但分散/无系统化记录",
+        "targetPerson": "黄俊峰或销售负责人",
+        "relatedNeedIds": ["REQ-001"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-002",
+        "category": "预算",
+        "priority": "必问",
+        "stage": "screening",
+        "question": "这次客户管理这块的预算大概是多少？有没有预期的投入产出目标？",
+        "purpose": "明确预算范围，匹配方案规格",
+        "expectedDirection": "有预算范围/无明确预算",
+        "targetPerson": "黄俊峰",
+        "relatedNeedIds": [],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-003",
+        "category": "业务",
+        "priority": "必问",
+        "stage": "deep-dive",
+        "question": "合同和回款这块，现在是怎么跟进的？有没有因为信息不透明出现过问题？",
+        "purpose": "验证合同回款管理需求的紧迫程度，收集具体场景",
+        "expectedDirection": "有具体问题场景/无系统管理",
+        "targetPerson": "黄俊峰或财务负责人",
+        "relatedNeedIds": ["REQ-005", "REQ-006"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-004",
+        "category": "技术",
+        "priority": "选问",
+        "stage": "deep-dive",
+        "question": "希望这个系统是在钉钉里面直接用，还是独立部署？",
+        "purpose": "确认技术架构方向",
+        "expectedDirection": "钉钉内嵌/独立部署/均可",
+        "targetPerson": "黄俊峰或技术负责人",
+        "relatedNeedIds": ["REQ-009"],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      },
+      {
+        "id": "PQ-005",
+        "category": "时间",
+        "priority": "必问",
+        "stage": "closing",
+        "question": "如果各方面条件合适，希望什么时候能用上这套系统？",
+        "purpose": "确认时间预期，匹配实施计划",
+        "expectedDirection": "有明确时间节点/希望尽快",
+        "targetPerson": "黄俊峰",
+        "relatedNeedIds": [],
+        "status": "pending",
+        "answer": null,
+        "resolvedInVersion": null
+      }
+    ],
+    "completionRate": {
+      "overall": 18,
+      "byCategory": {
+        "business": 25,
+        "functional": 0,
+        "technical": 20,
+        "non-functional": 0
+      },
+      "blockers": ["REQ-001 客户档案统一管理（confidence=low，priority=must）"]
+    }
+  }
+}
